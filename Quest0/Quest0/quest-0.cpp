@@ -85,7 +85,7 @@ int main () {
 bool isGameDone (string currentGuess) {
     /*  This function determines if the game is over */
 
-    return true; // placeholder
+    return false; // placeholder
 }
 
 bool isGameSuccessful (string currentGuess) {
@@ -103,7 +103,56 @@ void printGameOver (string currentGuess) {
     */
 }
 
-void printGameBoard (string guess) {
+void	printGameBoard (string guess) {
+	cout << "+";
+	for (int i{ 0 }; i < (correctCountry.size() + padding + padding); ++i)  // for (initialization; condition; update) {}  
+		cout << '-';
+	} 
+	cout << "+"; 
+	cout << endl;
+
+	cout << "|";
+	//for (int i{ 0 }; i < (correctCountry.size() + padding + padding); ++i) {
+	//	cout <<"-";
+	//}
+	for (int i{ 0 }; i < padding; i++) {
+		cout << " ";
+	}
+
+	cout << guess;
+	for (int i{ 0 }; i < padding; ++i) {
+		cout << " ";
+
+	}
+	cout << "|";
+	cout << endl;
+
+	cout << "|";
+	for (int i{ 0 }; i < padding; i++) {
+		cout << " ";
+	}
+
+	for (int i{ 0 }; i < correctCountry.size(); ++i) {
+		cout << "_";
+	}
+	for (int i{ 0 }; i < padding; ++i) {
+		cout << " ";
+
+	}
+	cout << "|";
+	cout << endl;
+
+	cout << "+"; 
+	for (int i{ 0 }; i < (correctCountry.size() + padding + padding); ++i) {
+		cout << '-'; 
+	}
+	cout << "+";
+	cout << endl;
+
+
+
+
+		
     /*
         This function will print out a rectangle to contain the
         current guess and the line
@@ -124,7 +173,9 @@ char processUserInput () {
         This function will print out a message for the user to enter a character
         The character will then be returned,
     */
-
+	cout << "enter";
+		char a;
+	cin >> a;
     return 'n'; // placeholder
 }
 
